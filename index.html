@@ -210,10 +210,10 @@ body{background:#0a0a0a;color:#fff;font-family:'Inter',sans-serif;height:100%;ov
 <div class="scoreboard-container">
 <div class="top-bar">
 <div class="timer-section">
-<div class="score-display home-score" id="homeScoreTop">08.0</div>
+<div class="score-display home-score" id="homeScoreTop">00.0</div>
 <button class="play-btn" id="playBtn" onclick="toggleTimer()">▶</button>
 <div class="game-timer" id="gameTimer" onclick="editTimer()">10:00</div>
-<div class="score-display away-score" id="awayScoreTop">14.0</div>
+<div class="score-display away-score" id="awayScoreTop">00.0</div>
 </div>
 <div class="quarter-display" id="quarterDisplay" onclick="nextQuarter()">4th</div>
 <div class="control-btns">
@@ -233,7 +233,7 @@ body{background:#0a0a0a;color:#fff;font-family:'Inter',sans-serif;height:100%;ov
 <button class="score-btn minus" onclick="addScore('home',-3)">−3</button>
 </div>
 <div class="team-name" id="homeTeamName">Biru</div>
-<div class="main-score home-main" id="homeScore">8</div>
+<div class="main-score home-main" id="homeScore">0</div>
 <div class="possession-dots" id="homePossession">
 <div class="dot active" onclick="togglePossession('home')"></div>
 <div class="dot" onclick="togglePossession('home')"></div>
@@ -252,7 +252,7 @@ body{background:#0a0a0a;color:#fff;font-family:'Inter',sans-serif;height:100%;ov
 <button class="score-btn minus" onclick="addScore('away',-3)">−3</button>
 </div>
 <div class="team-name" id="awayTeamName">Merah</div>
-<div class="main-score away-main" id="awayScore">14</div>
+<div class="main-score away-main" id="awayScore">0</div>
 <div class="possession-dots" id="awayPossession">
 <div class="dot" onclick="togglePossession('away')"></div>
 <div class="dot" onclick="togglePossession('away')"></div>
@@ -349,7 +349,7 @@ body{background:#0a0a0a;color:#fff;font-family:'Inter',sans-serif;height:100%;ov
 <div class="reset-section"><button class="reset-btn" onclick="resetGame()">🔄 Reset Pertandingan</button> <button class="reset-btn" style="background:#444" onclick="newTournament()">🆕 Mulai Turnamen Baru</button></div>
 </div>
 <script>
-let gameState={homeScore:8,awayScore:14,homeFouls:0,awayFouls:0,quarter:4,timerRunning:false,timeSeconds:600,shotClock:24,homePossession:1,awayPossession:0,editMode:false,deleteMode:false};
+let gameState={homeScore:0,awayScore:0,homeFouls:0,awayFouls:0,quarter:4,timerRunning:false,timeSeconds:600,shotClock:24,homePossession:1,awayPossession:0,editMode:false,deleteMode:false};
 let timerInterval,shotClockInterval;
 let matchInfo={};
 let currentMatchKey=null;
